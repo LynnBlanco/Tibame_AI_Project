@@ -12,7 +12,7 @@ link = pymysql.connect(
 
 cursor = link.cursor()
 
-cursor.execute("CALL fetch_crop_data (1,'2021-06-29',1,8)")
+cursor.execute("CALL fetch_crop_data (1,'2021-06-14',15,8)")
 
 for data in cursor.fetchall():
     print(data)
@@ -21,7 +21,11 @@ link.close()
 
 # 查詢範例：cursor.execute("CALL fetch_crop_data (1,'2021-06-29',15,8)")
 # fetch_crop_data 參數：(查詢類別, 查詢時間, 農產品id, 市場id)
-# 查詢類別：1：歷史零售價資料, 2：預測資料
+# 查詢類別：
+# 	1：歷史零售價資料：
+# 		輸出：(日期,市場,產品,零售價)
+# 	2：預測資料：
+#		輸出：(日期,市場,產品,零售價)
 # 查詢時間：請以字串方式代入
 # 農產品id：
 # '1','高麗菜','LA1 甘藍 初秋 '
