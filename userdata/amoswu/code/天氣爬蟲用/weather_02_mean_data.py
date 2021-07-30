@@ -13,7 +13,7 @@ now_day = current_day
 
 util_mysql.dbConnect()
 
-util_mysql.cur.execute("call p_tbl_weather_mean('')") # 不帶日期參數，就是會做昨天的日期
+util_mysql.cur.execute("call p_tbl_weather_mean_c('')") # 不帶日期參數，就是會做昨天的日期
 # util_mysql.cur.execute("CALL p_tbl_weather_mean ('2021-07-02')") # 指定日期
 
 for data in util_mysql.cur.fetchall():
