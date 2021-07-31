@@ -23,7 +23,7 @@ now_day = current_day
 queryFetchStationSQL = "CALL fetch_station(1,NULL)"
 queryFetchDailyDateSQL = "CALL fetch_daily_date (1, 199601, 200912)"
 insertDailySQL = '''
-INSERT INTO `test_tbl_weather_raw` (
+INSERT INTO `tbl_weather_raw` (
 `ObsTime`, `StnPres`, `SeaPres`, `StnPresMax`, `StnPresMaxTime`, `StnPresMin`, `StnPresMinTime`,
 `Temperature`, `TMax`, `TMaxTime`, `TMin`, `TMinTime`, `TdDewPoint`, `RH`, `RHMin`, `RHMinTime`,
 `WS`, `WD`, `WSGust`, `WDGust`, `WGustTime`, `Precp`, `PrecpHour`, `PrecpMax10`, `PrecpMax10Time`,
