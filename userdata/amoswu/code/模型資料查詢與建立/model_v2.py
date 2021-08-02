@@ -48,7 +48,7 @@ def queryDailyPrice(query_type, start_date, end_date, crop_id, market_id):
 
 
 # 插入預測價格：
-# def insertPredictPrice (插入日期, 農產品id, 市場id,當日價格,預測1日價格,預測2日價格,預測3日價格,預測7日價格,預測15日價格, 模組中文名稱(可以訂))
+# def insertPredictPrice (插入日期, 農產品id, 市場id,當日價格,預測1日價格,預測2日價格,預測3日價格,預測7日價格,預測15日價格, 模組中文名稱(可以自訂))
 def insertPredictPrice(insert_date, crop_id, market_id, current_price, pred_1D_price, pred_2D_price, pred_3D_price, pred_7D_price, pred_15D_price, model_type):
 	args = [insert_date, crop_id, market_id, current_price, pred_1D_price, pred_2D_price, pred_3D_price, pred_7D_price, pred_15D_price, model_type, 0]
 	cursor.callproc('p_predict_crop_price_c', args)
